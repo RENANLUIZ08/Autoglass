@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Autoglass.Domain.Repository.Interfaces
+namespace Autoglass.Service.Repository.Interfaces
 {
-    public interface IRepositoryBase<Entity> where Entity : class
+    public interface IRepositoryBase<TEntity> where TEntity : class
     {
-        Entity GetFirst(Expression<Func<Entity, bool>> predicate);
-        Entity InsertDb(Entity entity);
-        Entity UpdateDb(Entity entity);
+        List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
+        TEntity InsertDb(TEntity entity);
+        TEntity UpdateDb(TEntity entity);
         bool Commit();
     }
 }

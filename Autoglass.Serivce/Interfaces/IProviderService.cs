@@ -1,13 +1,10 @@
 ﻿using Autoglass.Domain.DTO;
-using System.Collections.Generic;
+using Autoglass.Service.Repository.Interfaces;
 
-namespace Autoglass.Serivce.Service.Interfaces
+namespace Autoglass.Service.Service.Interfaces
 {
-    public interface IProviderService
+    public interface IProviderService : IServiceBase<ProviderDto>
     {
-        ProviderDto Create(ProviderDto dto);
-        ProviderDto Update(ProviderDto dto);
-        ProviderDto GetById(int id);
-        List<ProviderDto> GetAll();
+
     }
 }

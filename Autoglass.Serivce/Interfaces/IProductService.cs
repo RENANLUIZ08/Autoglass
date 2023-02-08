@@ -1,14 +1,10 @@
 ﻿using Autoglass.Domain.DTO;
-using System.Collections.Generic;
+using Autoglass.Service.Repository.Interfaces;
 
-namespace Autoglass.Serivce.Service.Interfaces
+namespace Autoglass.Service.Service.Interfaces
 {
-    public interface IProductService : ServiceBase
+    public interface IProductService : IServiceBase<ProductDto>
     {
-        ProductDto Create(ProductDto dto);
-        ProductDto Update(ProductDto dto);
-        ProductDto GetById(int id);
-        List<ProductDto> GetAll();
         void Delete(int id);
     }
 }

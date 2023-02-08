@@ -1,5 +1,5 @@
 ﻿using Autoglass.Domain.Entities;
-using Autoglass.Domain.Repository.Interfaces;
+using Autoglass.Service.Repository.Interfaces;
 
 namespace Autoglass.Domain.Repository.Interfaces
 {

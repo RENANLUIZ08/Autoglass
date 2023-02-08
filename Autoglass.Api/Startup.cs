@@ -1,3 +1,4 @@
+using Autoglass.Api.StartupConfig;
 using Autoglass.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,10 +30,9 @@ namespace Autoglass.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Autoglass.Api", Version = "v1" });
-            });
+            services.AddDataBaseConfig(Configuration);
+            services.AddDependencyInjectionConfig();
+            services.AddSwaggerConfig();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,16 +41,15 @@ namespace Autoglass.Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Autoglass.Api v1"));
             }
 
+            app.UseDataBaseConfiguration();
+
+            app.UseSwaggerConfig();
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

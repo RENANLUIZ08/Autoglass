@@ -14,9 +14,9 @@ namespace Autoglass.Api.StartupConfig
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "WebApp",
+                    Title = "Autoglass Api",
                     Version = "v1",
-                    Description = "WebApp",
+                    Description = "Autoglass App",
                     Contact = new OpenApiContact
                     {
                         Name = "Renan Luiz Blasechi",
@@ -32,7 +32,7 @@ namespace Autoglass.Api.StartupConfig
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApp v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Autoglass v1");
                 c.DocExpansion(DocExpansion.None);
             });
         }

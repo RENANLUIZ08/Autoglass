@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoglass.Api", "Autoglass.Api\Autoglass.Api.csproj", "{B17586CF-D393-4B56-9237-0B174AC243E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autoglass.Api", "Autoglass.Api\Autoglass.Api.csproj", "{B17586CF-D393-4B56-9237-0B174AC243E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1376D384-07B2-4C34-AC7C-A5B03B75EA10}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{419B7378-979B-41AE-A5AC-F475A2C6EE7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoglass.Domain", "Autoglass.Domain\Autoglass.Domain.csproj", "{174DB010-1D89-48DD-B3EB-86EE144627B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autoglass.Domain", "Autoglass.Domain\Autoglass.Domain.csproj", "{174DB010-1D89-48DD-B3EB-86EE144627B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoglass.Repository", "Autoglass.Repository\Autoglass.Repository.csproj", "{5DC420B9-F8D2-4E90-A6FB-1AF09B037F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autoglass.Repository", "Autoglass.Repository\Autoglass.Repository.csproj", "{5DC420B9-F8D2-4E90-A6FB-1AF09B037F54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoglass.Serivce", "Autoglass.Serivce\Autoglass.Serivce.csproj", "{0C85169F-6A48-49D3-AA35-5F3A18C1F6E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autoglass.Service", "Autoglass.Serivce\Autoglass.Service.csproj", "{0C85169F-6A48-49D3-AA35-5F3A18C1F6E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
