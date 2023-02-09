@@ -94,7 +94,7 @@ namespace Autoglass.Api.Controllers
         [SwaggerResponse(statusCode: StatusCodes.Status400BadRequest, description: "Verifique os dados enviados na requisicao e tente novamente.")]
         [SwaggerResponse(statusCode: StatusCodes.Status404NotFound, description: "Não foram localizados dados com os as informacoes enviadas.")]
 
-        public override IActionResult GetAll()
+        public IActionResult GetAll()
         {
             try
             {

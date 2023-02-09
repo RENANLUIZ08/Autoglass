@@ -1,5 +1,6 @@
 ﻿using Autoglass.Domain.DTO;
 using Autoglass.Domain.Entities;
+using Autoglass.Domain.Enum;
 using Autoglass.Domain.Repository.Interfaces;
 using Autoglass.Service.Implementations;
 using Autoglass.Service.Service.Interfaces;
@@ -23,7 +24,6 @@ namespace Autoglass.Service.Service.Implementations
 
         public ProductDto Create(ProductDto dto)
         {
-            dto.Id = null;
             var entity = _mapper.Map<Product>(dto);
             var result = _repository.InsertDb(entity);
 
@@ -68,9 +68,13 @@ namespace Autoglass.Service.Service.Implementations
             return _mapper.Map<ProductDto>(getProduct);
         }
 
-        public List<ProductDto> GetAll()
+        public List<ProductDto> GetAll(bool all)
         {
-            var getProducts = _repository.GetAll();
+            var getProducts = 
+                !all?
+                _repository.GetAll((q) => q.State == EtypeOfProduct.Active):
+                _repository.GetAll();
+
             if (getProducts.Count == 0)
             { throw new NullReferenceException("Nenhum produto foi localizado."); }
 

@@ -39,7 +39,7 @@ namespace Autoglass.Teste
             Assert.Throws<Exception>(
                 () =>
                     new ProductDto(
-                        null,
+                        0,
                         "produto exemplo",
                         EtypeOfProduct.Active,
                         manufacture,
@@ -58,7 +58,7 @@ namespace Autoglass.Teste
             Assert.Throws<Exception>(
                 () =>
                     new ProductDto(
-                        null,
+                        0,
                         "produto exemplo",
                         state,
                         DateTime.Now,

@@ -9,6 +9,5 @@ namespace Autoglass.Service.Repository.Interfaces
         TDto Create(TDto dto);
         TDto Update(TDto dto);
         TDto GetById(int id);
-        List<TDto> GetAll();
     }
 }

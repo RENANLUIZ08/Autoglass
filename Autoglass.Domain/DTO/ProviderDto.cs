@@ -9,8 +9,7 @@ namespace Autoglass.Domain.DTO
 {
     public class ProviderDto
     {
-        [DefaultValue(null)]
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public string CNPJ { get; set; }
     }

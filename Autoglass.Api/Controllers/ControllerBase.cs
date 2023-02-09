@@ -9,6 +9,5 @@ namespace Autoglass.Api.Controllers
         public abstract IActionResult Get(int id);
         public abstract IActionResult Create([FromBody]TEntity entity);
         public abstract IActionResult Update([FromBody] TEntity entity);
-        public abstract IActionResult GetAll();
     }
 }

@@ -23,7 +23,6 @@ namespace Autoglass.Service.Service.Implementations
         
         public ProviderDto Create(ProviderDto dto)
         {
-            dto.Id = null;
             var entity = _mapper.Map<Provider>(dto);
             var result = _repository.InsertDb(entity);
 
