@@ -14,7 +14,7 @@ namespace Autoglass.Domain.DTO
         public DateTime Expiration { get; set; }
         public int ProviderId { get; set; }
 
-        public ProductDto(int? id, string description, EtypeOfProduct state, DateTime manufacturing, DateTime expiration, int providerId)
+        public ProductDto(int? id, string description, EtypeOfProduct state, DateTime manufacturing, DateTime expiration, int? providerId)
         {
             if(manufacturing >= expiration) 
             { throw new Exception("Não é possivel cadastrar um produto com data de fabricação igual ou superior a data de validade."); }
@@ -30,9 +30,7 @@ namespace Autoglass.Domain.DTO
             State = state;
             Manufacturing = manufacturing;
             Expiration = expiration;
-            ProviderId = providerId;
-
-
+            ProviderId = providerId.Value;
         }
     }
 }

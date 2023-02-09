@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autoglass.Api\Autoglass.Api.csproj" />
+    <ProjectReference Include="..\Autoglass.Domain\Autoglass.Domain.csproj" />
+    <ProjectReference Include="..\Autoglass.Repository\Autoglass.Repository.csproj" />
+    <ProjectReference Include="..\Autoglass.Serivce\Autoglass.Service.csproj" />
+  </ItemGroup>
+
+</Project>
