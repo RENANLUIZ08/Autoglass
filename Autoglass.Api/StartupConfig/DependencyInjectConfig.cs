@@ -2,8 +2,6 @@
 using Autoglass.Domain.Entities;
 using Autoglass.Domain.Repository.Interfaces;
 using Autoglass.Repository.Implementations;
-using Autoglass.Service.Implementations;
-using Autoglass.Service.Repository.Interfaces;
 using Autoglass.Service.Service.Implementations;
 using Autoglass.Service.Service.Interfaces;
 using AutoMapper;
@@ -30,7 +28,6 @@ namespace Autoglass.Api.StartupConfig
 
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IProviderRepository, ProviderRepository>();
-            //services.AddTransient(typeof(IServiceBase<>));
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IProviderService, ProviderService>();
         }
